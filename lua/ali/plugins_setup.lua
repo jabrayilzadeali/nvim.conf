@@ -1,6 +1,3 @@
--- twst1 eest2
-
-
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -42,7 +39,9 @@ packer.startup({function()
   -- Colorschemes
   use 'shaunsingh/moonlight.nvim'
 
+  -- Tmux
   use 'christoomey/vim-tmux-navigator'
+  use 'preservim/vimux'
 
   use 'tpope/vim-surround'
 
@@ -54,11 +53,25 @@ packer.startup({function()
   }
 
   use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use {
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup()
     end
   }
+
+    -- treesitter configuration
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
+  })
 
   if packer_bootstrap then
     require('packer').sync()
