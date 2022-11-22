@@ -1,4 +1,7 @@
 require("ali.plugins_setup")
+
+require("ali.plugins.leap")
+require("ali.plugins.nvim_tree")
 require("ali.plugins.treesitter")
 require("ali.core.options")
 require("ali.core.keymaps")
