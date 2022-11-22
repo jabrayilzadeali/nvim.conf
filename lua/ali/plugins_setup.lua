@@ -43,7 +43,9 @@ packer.startup({function()
   use 'christoomey/vim-tmux-navigator'
   use 'preservim/vimux'
 
+  -- Tpope
   use 'tpope/vim-surround'
+  use 'tpope/vim-repeat'
 
   use {
     'numToStr/Comment.nvim',
@@ -72,6 +74,8 @@ packer.startup({function()
       ts_update()
     end,
   })
+
+  use "ggandor/leap.nvim"
 
   if packer_bootstrap then
     require('packer').sync()
