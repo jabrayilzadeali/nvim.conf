@@ -1,3 +1,6 @@
+-- twst1 eest2
+
+
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -35,6 +38,20 @@ packer.startup({function()
   -- Your plugins here
   -- Packer can manage itself
   use "wbthomason/packer.nvim"
+
+  -- Colorschemes
+  use 'shaunsingh/moonlight.nvim'
+
+  use 'christoomey/vim-tmux-navigator'
+
+  use 'tpope/vim-surround'
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 
   if packer_bootstrap then
     require('packer').sync()
