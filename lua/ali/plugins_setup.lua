@@ -86,6 +86,15 @@ packer.startup({function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use({
+    "Pocco81/true-zen.nvim",
+    config = function()
+       require("true-zen").setup {
+        -- your config goes here
+        -- or just leave it empty :)
+       }
+    end,
+  })
 
 
   if packer_bootstrap then
