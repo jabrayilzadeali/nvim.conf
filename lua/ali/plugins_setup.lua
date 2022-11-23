@@ -36,6 +36,9 @@ packer.startup({function()
   -- Packer can manage itself
   use "wbthomason/packer.nvim"
 
+  -- time spend coding
+  use 'wakatime/vim-wakatime'
+
   -- Colorschemes
   use 'shaunsingh/moonlight.nvim'
 
@@ -82,6 +85,8 @@ packer.startup({function()
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+
 
   if packer_bootstrap then
     require('packer').sync()
