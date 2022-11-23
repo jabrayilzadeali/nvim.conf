@@ -75,7 +75,13 @@ packer.startup({function()
     end,
   })
 
-  use "ggandor/leap.nvim"
+  -- use "ggandor/leap.nvim"
+
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
