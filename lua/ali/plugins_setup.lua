@@ -112,9 +112,6 @@ packer.startup({function()
     'akinsho/bufferline.nvim', 
     tag = "v3.*", 
     requires = 'nvim-tree/nvim-web-devicons',
-    config = function()
-      require("bufferline").setup{}
-    end
   }
 
   -- use {
@@ -156,6 +153,15 @@ packer.startup({function()
       }
     end
   }
+  
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
 
   if packer_bootstrap then
     require('packer').sync()

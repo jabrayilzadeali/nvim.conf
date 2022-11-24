@@ -13,6 +13,20 @@ keymap.set("n", "<C-q>", ":bd<CR>", opts)
 -- Save buffer
 keymap.set("n", "<C-s>", ":w<CR>", opts)
 
+-- Increment and decrement numbers
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
+keymap.set("v", "+", "<C-a>")
+keymap.set("v", "-", "<C-x>")
+
+-- Select all text
+keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- Visual --
+-- Stay in indent mode
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
+
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -29,8 +43,11 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git bra
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
 -- True-Zen
-keymap.set("n", "<leader>zn", ":TZNarrow<CR>")
-keymap.set("v", "<leader>zn", ":'<,'>TZNarrow<CR>")
-keymap.set("n", "<leader>zf", ":TZFocus<CR>")
-keymap.set("n", "<leader>zm", ":TZMinimalist<CR>")
-keymap.set("n", "<leader>za", ":TZAtaraxis<CR>")
+keymap.set("n", "<leader>zn", "<cmd>TZNarrow<CR>")
+keymap.set("v", "<leader>zn", "<cmd>'<,'>TZNarrow<CR>")
+keymap.set("n", "<leader>zf", "<cmd>TZFocus<CR>")
+keymap.set("n", "<leader>zm", "<cmd>TZMinimalist<CR>")
+keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>")
+
+-- Nvim Tree
+keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
