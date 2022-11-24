@@ -79,8 +79,6 @@ packer.startup({function()
     end,
   })
 
-  -- use "ggandor/leap.nvim"
-
   -- Telescope
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" } 
   use "nvim-telescope/telescope-file-browser.nvim"
@@ -117,6 +115,10 @@ packer.startup({function()
     config = function()
       require("bufferline").setup{}
     end
+  }
+
+  use {
+    "ggandor/leap.nvim",
   }
 
   if packer_bootstrap then
