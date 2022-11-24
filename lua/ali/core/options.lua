@@ -34,7 +34,7 @@ local options = {
   linebreak = true,                        -- companion to wrap, don't split words
   scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  -- guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   guicursor="n-v:block,i-ci-ve-c:ver25,r-cr:hor20,o:hor50" ..
   ",a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor" ..
