@@ -118,6 +118,24 @@ packer.startup({function()
   }
 
   -- use {
+  --   'nvim-lualine/lualine.nvim',
+  --   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  --   config = function()
+  --     require('lualine').setup()
+  --   end
+  -- }
+
+  use({
+    "NTBBloodbath/galaxyline.nvim",
+    -- your statusline
+    config = function()
+      require("galaxyline.themes.eviline")
+    end,
+    -- some optional icons
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+  })
+
+  -- use {
   --   "ggandor/leap.nvim",
   --   config = function()
   --     require('leap').add_default_mappings()

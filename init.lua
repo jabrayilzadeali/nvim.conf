@@ -1,6 +1,5 @@
 require("ali.plugins_setup")
 
--- require("ali.plugins.leap")
 require("ali.plugins.dashboard")
 require("ali.plugins.telescope")
 require("ali.plugins.nvim_tree")
