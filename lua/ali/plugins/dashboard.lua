@@ -34,16 +34,16 @@ db.custom_center = {
 	-- 	action = "SessionLoad",
 	-- },
 	{
-		icon = "  ",
-		desc = "Find recent files                       ",
-		action = "Telescope oldfiles",
-		shortcut = "SPC f r",
-	},
-	{
 		icon = "  ",
 		desc = "Find files                              ",
 		action = "Telescope find_files find_command=rg,--hidden,--files",
 		shortcut = "SPC f f",
+	},
+	{
+		icon = "  ",
+		desc = "Find recent files                       ",
+		action = "Telescope oldfiles",
+		shortcut = "SPC f r",
 	},
 	{
 		icon = "  ",
