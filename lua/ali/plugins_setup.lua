@@ -109,6 +109,15 @@ packer.startup({function()
   use {"mg979/vim-visual-multi", branch = "master"}
   use {'glepnir/dashboard-nvim'}
 
+  -- using packer.nvim
+  use {
+    'akinsho/bufferline.nvim', 
+    tag = "v3.*", 
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      require("bufferline").setup{}
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()

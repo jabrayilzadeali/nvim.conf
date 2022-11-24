@@ -3,7 +3,17 @@ local keymap = vim.keymap
 
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
--- telescope
+-- Navigate buffers
+keymap.set("n", "<S-l>", ":bnext<CR>", opts)
+keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Close buffer
+keymap.set("n", "<C-q>", ":bd<CR>", opts)
+
+-- Save buffer
+keymap.set("n", "<C-s>", ":w<CR>", opts)
+
+
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
