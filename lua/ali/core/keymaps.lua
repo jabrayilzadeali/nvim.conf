@@ -51,3 +51,10 @@ keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>")
 
 -- Nvim Tree
 keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+
+-- Vimux
+keymap.set("n", "<leader>zq", "<cmd>VimuxCloseRunner<CR>")
+keymap.set("n", "<leader>zc", "<cmd>VimuxClearTerminalScreen<CR>")
+keymap.set("n", "<leader>zp", "<cmd>VimuxPromptCommand<CR>")
+keymap.set("n", "<leader>zv", "<cmd>VimuxZoomRunner<CR>")
+
