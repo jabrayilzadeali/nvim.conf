@@ -35,6 +35,7 @@ packer.startup({function()
   -- Your plugins here
   -- Packer can manage itself
   use "wbthomason/packer.nvim"
+  use "nvim-lua/plenary.nvim"
 
   -- time spend coding
   use 'wakatime/vim-wakatime'
