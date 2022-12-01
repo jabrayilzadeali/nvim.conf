@@ -17,7 +17,7 @@ local options = {
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
   termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 300,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+  timeoutlen = 300,                          -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
@@ -39,6 +39,7 @@ local options = {
   guicursor="n-v:block,i-ci-ve-c:ver25,r-cr:hor20,o:hor50" ..
   ",a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor" ..
   ",sm:block-blinkwait175-blinkoff150-blinkon175"
+    --  Enable blinking together with different cursor shapes for insert/command mode, and cursor highlighting:
 }
 
 for k, v in pairs(options) do
